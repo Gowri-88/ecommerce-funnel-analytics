@@ -122,7 +122,7 @@ CASE
 END AS roas
 ```
 
-Full query file → [`sql/all_queries.sql`](sql/all_queries.sql)
+Full query file → [`sql/02_analysis_queries.sql`](sql/all_queries.sql)
 
 ---
 
@@ -134,7 +134,6 @@ ecommerce-analytics/
 ├── README.md
 ├── sql/
 │   ├── schema.sql            ← Table creation
-│   ├── load_data.sql         ← Data loading
 │   └── all_queries.sql       ← All 20+ analysis queries
 │
 ├── data/                     ← Source CSV files
@@ -155,46 +154,20 @@ ecommerce-analytics/
     └── ... (5 page screenshots)
 ```
 
----
-
-## ▶️ How to Run
-
-**You need:** MySQL 8.0+ · MySQL Workbench · Power BI Desktop (both free)
-
-```sql
--- 1. Create database
-source sql/schema.sql
-```
-
-```bash
-# 2. Load data (run from terminal, not Workbench)
-mysql --local-infile=1 -u root -p ecom_analytics < sql/load_data.sql
-```
-
-```sql
--- 3. Verify
-SELECT 'users', COUNT(*) FROM users
-UNION ALL SELECT 'events', COUNT(*) FROM events
-UNION ALL SELECT 'orders', COUNT(*) FROM orders;
--- Expected: 284000 · 1.2M+ · 19140
-```
-
-```
-4. Run all_queries.sql → export each result as CSV → save to results/
-5. Open ecommerce_analytics.pbix in Power BI
-6. Transform Data → update file paths to your results/ folder
-7. Close & Apply → done
-```
 
 ---
 
-## 📈 Top 3 Recommendations
+## 📈 Business Recommendations
 
 **1. Fix mobile checkout** — 42% of traffic, half the conversion rate. Add Apple/Google Pay. Highest volume opportunity.
 
 **2. Scale email now** — 81.3x ROAS on $7K spend. The math speaks for itself. Build abandoned cart sequences. Double the budget.
 
 **3. Cut display, move budget to paid search** — 11.1x vs 0x. No new creative needed. Immediate efficiency gain.
+
+**4. Re-engage users at Week 4** — Cohort analysis shows February users begin dropping off at Week 5. A targeted re-engagement email triggered at Week 4 (before the drop) could recover thousands of at-risk users per cohort.
+
+**5. Convert one-time buyers to repeat buyers** — 95.3% of customers bought only once. VIP customers (3-5 orders) have an average LTV of $503 vs $170 for one-time buyers. A post-purchase email sequence targeting first-time buyers is the single highest-LTV retention move available.
 
 ---
 
