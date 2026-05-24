@@ -51,7 +51,7 @@ The one-page overview for anyone who has two minutes. Revenue, orders, CVR, cart
 **$3.26M revenue · 19,140 orders · 6.41% CVR · 76.8% cart abandonment**
 
 ### Page 2 — Funnel Deep-Dive
-![Page 2](screenshots/page2_funnel_analysis.png)
+![Page 2](screenshots/page2_Funnel_analysis.png)
 Stage-by-stage drop-off rates with both absolute user counts and percentage labels. CVR broken down by device type. A summary table showing stage CVR and overall CVR at every step.
 
 **Largest absolute drop: 125,701 users at Product View → Add to Cart · Cart abandonment: 76.8%**
